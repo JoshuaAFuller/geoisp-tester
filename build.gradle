@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'geoisp.Main'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'geoisp.Main'
+    }
+}
+
+repositories { 
+    mavenCentral() 
+}
+
+dependencies {
+    implementation 'com.maxmind.geoip2:geoip2:2.14.0'
+}
