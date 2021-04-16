@@ -1,5 +1,8 @@
-apply plugin: 'java'
-apply plugin: 'application'
+plugins {
+  id 'com.github.johnrengelman.shadow' version '6.1.0'
+  id 'application'
+  id 'java'
+}
 
 mainClassName = 'geoisp.Main'
 

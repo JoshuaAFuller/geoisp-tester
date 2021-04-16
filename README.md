@@ -1,7 +1,7 @@
 # geoisp-tester
 
-to build: `./gradlew build`
+to build: `./gradlew shadowJar`
 
-to run `./gradlew run --args="<IP ADDRESS>"`
+the uberjar will be in `build/libs`
 
-to make into a runnable jar: idk
+to run `java -jar <JAR> <IP ADDRESS>`
