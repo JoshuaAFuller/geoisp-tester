@@ -11,9 +11,11 @@ public class Main {
   
   public static void main(String[] args) {
       String strAddr = args[0];
+      String host = "geoip.maxmind.com";
+      if (args.length > 1) { host = args[1]; }
       WebServiceClient client = new WebServiceClient.Builder(
           MAX_MIND_USER, MAX_MIND_LICENSE
-      ).build();
+      ).host(host).build();
       try {
           InetAddress addr = Inet4Address.getByName(strAddr);
           CityResponse cityResponse = client.city(addr);
